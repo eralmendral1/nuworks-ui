@@ -6,8 +6,6 @@ export type Todo  = {
     updated_at: string
 }
 
-export type TodoEdittable = Todo & { isEditting: boolean }
-
 export type CreateTodo = {
     title: string,
     done: boolean
