@@ -7,7 +7,7 @@
 -  ```yarn dev``` to run app.
 
 ## API URL
-- https://github.com/eralmendral1/nuworks-api
+- <a href="https://github.com/eralmendral1/nuworks-api" target="_blank">https://github.com/eralmendral1/nuworks-api</a>
 
 
 ## Performance Insights
