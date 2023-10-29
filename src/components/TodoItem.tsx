@@ -61,11 +61,11 @@ const TodoItem: React.FC<{ todo: Todo }> = ({ todo }) => {
                     <input type="text" value={title} onChange={(e) => { setTitle(e.target.value) }}
                         placeholder='Update todo'
                         className="max-w-[360px] border border-gray-400 w-full p-2 rounded focus:outline-none text-gray-600 my-2" />
-                    <ActionButton onClick={() => setEdittable(false)}>
-                        <p className="text-rose-600">Cancel</p>
-                    </ActionButton>
                     <ActionButton type="submit">
                         <p className="text-indigo-600">Update</p>
+                    </ActionButton>
+                    <ActionButton type="cancel" onClick={() => setEdittable(false)}>
+                        <p className="text-rose-600">Cancel</p>
                     </ActionButton>
                 </form>
 
