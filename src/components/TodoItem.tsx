@@ -55,7 +55,7 @@ const TodoItem: React.FC<{ todo: Todo }> = ({ todo }) => {
     }
 
     return (
-        <div className=" flex items-center justify-between w-full my-2 p-3 rounded shadow-xl bg-white ">
+        <div className={`flex items-center justify-between w-full my-2 p-3 rounded shadow-xl bg-white bg- ${todo.done && 'bg-slate-600'}`} >
             {edittable ? <div>
                 <form onSubmit={update} className='flex items-center'>
                     <input type="text" value={title} onChange={(e) => { setTitle(e.target.value) }}
@@ -72,11 +72,11 @@ const TodoItem: React.FC<{ todo: Todo }> = ({ todo }) => {
             </div> :
                 <div className="flex items-center justify-between w-full px-6">
                     <div className="flex items-center">
-                        <button title="complete todo" onClick={complete}><AiOutlineCheckSquare size={32} className="text-green-600 mr-6"/></button>
+                        {!todo.done && <button title="complete todo" onClick={complete}><AiOutlineCheckSquare size={32} className="text-green-600 mr-6" /></button>}
                         <h1 className="font-semibold text-lg text-gray-700">{todo.title}</h1>
                     </div>
                     <div>
-                        <button title="edit todo" onClick={() => setEdittable(true)}><AiOutlineEdit size={32} className="text-indigo-600 mx-1" /></button>
+                        {!todo.done && <button title="edit todo" onClick={() => setEdittable(true)}><AiOutlineEdit size={32} className="text-indigo-600 mx-1" /></button>}
                         <button title="delete todo" onClick={() => remove(todo._id)}><AiOutlineDelete size={32} className="text-rose-600 mx-1" /></button>
                     </div>
                 </div>
