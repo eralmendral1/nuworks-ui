@@ -5,8 +5,8 @@ const TodoStatus: React.FC<{ total: number, completed: number }> = ({ total, com
         <div>
             {total - completed > 0 &&
                 <div className="flex">
-                    <h1 className="ml-4 text-gray-400 text-sm">Completed: {completed} </h1>
-                    <h1 className="ml-4 text-gray-400 text-sm">Remaining: {total - completed}</h1>
+                    <h1 className="ml-4 text-gray-700 text-sm">Completed: {completed} </h1>
+                    <h1 className="ml-4 text-gray-700 text-sm">Remaining: {total - completed}</h1>
                 </div>
             }
 
