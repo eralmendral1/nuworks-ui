@@ -55,7 +55,7 @@ const TodoItem: React.FC<{ todo: Todo }> = ({ todo }) => {
     }
 
     return (
-        <div className={`flex items-center justify-between w-full my-2 p-3 rounded shadow-xl bg-white bg- ${todo.done && 'bg-slate-600'}`} >
+        <div className={`flex items-center justify-between w-full my-2 p-3 rounded shadow-xl  ${todo.done ? 'bg-slate-600' : 'bg-white'}`} >
             {edittable ? <div>
                 <form onSubmit={update} className='flex items-center'>
                     <input type="text" value={title} onChange={(e) => { setTitle(e.target.value) }}
